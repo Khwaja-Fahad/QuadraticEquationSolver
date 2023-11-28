@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    // Declare variables for coefficients and roots
+    float a, b, c, discriminant, root1, root2;
+
+    // Prompt user to enter quadratic equation coefficients
+    printf("Enter coefficients a, b, and c: ");
+    scanf("%f %f %f", &a, &b, &c);
+
+    // Calculate the discriminant
+    discriminant = b * b - 4 * a * c;
+
+    // Check if roots are real
+    if (discriminant < 0) {
+        // No real roots
+        printf("No real roots.\n");
+    } else {
+        // Calculate roots using the quadratic formula
+        root1 = (-b + sqrt(discriminant)) / (2 * a);
+        root2 = (-b - sqrt(discriminant)) / (2 * a);
+
+        // Output roots with two decimal places
+        printf("Roots: %.2f and %.2f\n", root1, root2);
+    }
+
+    return 0;
+}
